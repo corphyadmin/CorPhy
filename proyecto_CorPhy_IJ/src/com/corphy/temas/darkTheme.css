@@ -1,0 +1,322 @@
+/**
+*                                              DARK THEME
+*
+* Este tema contiene los estilos que le da una apariencia de color oscuro a los componentes de la interfaz gráfica. La
+* gran mayoría de estos estilos dependen del tema Light. Si se desea que un componente tenga un modo oscuro se deben
+* escribir sus estilos en este archivo.
+*
+* Los estilos se clasifican en dos categorías:
+* Generales: Componentes que se utilizan en cualquier parte de la interfaz gráfica y por tanto tendrán estilos globales.
+* Específicos: Componentes que se utilizan en partes determinadas de la interfaz gráfica y por tanto requieren estilos
+* personalizados.
+*
+* Autor: CorPhy
+*
+*/
+
+/***************************************************************************
+ *                                                                         *
+ * Estilos generales de la aplicación			                           *
+ *                                                                         *
+ **************************************************************************/
+
+/* Estilos del sidebar */
+.sidebar {
+    -fx-background-color: #111111;
+}
+
+/* Estilos de la barra del sidebar */
+.apBarraSidebar {
+    -fx-background-color: #131313;
+    -fx-effect: dropshadow(three-pass-box, #050505, 10.0, 0.0, 0.0, 0.0);
+}
+
+/* Estilos de las categorias del menú */
+.categoriaMenu {
+    -fx-text-fill: #555555;
+    -fx-background-color: #090909;
+}
+
+/* Estilos los items del menú */
+.itemMenu {
+    -fx-background-radius: 0em;
+    -fx-text-fill: #cccccc;
+}
+
+.itemMenu:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos de los iconos (triángulos) de posición */
+.positionIcons {
+    -fx-fill: black;
+}
+
+/* Estilos del botón Átras del menú */
+.btnBack {
+    -fx-background-radius: 10em;
+}
+
+.btnBack:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos de los AnchorPane de encabezado */
+.anchorPaneHeader {
+    -fx-background-color: #090909;
+    -fx-border-color: #131313;
+}
+
+/* Estilos de la línea superior o decorativa */
+.lineaSuperior {
+    -fx-background-color: #999999;
+}
+
+/* Estilos de los títulos  principales */
+.lbTituloPr {
+    -fx-text-fill: #888888;
+}
+
+/* Estilos de los títulos  secundarios */
+.lbTituloSc {
+    -fx-text-fill: #555555;
+}
+
+/* Estilos de los AnchorPane Principales */
+.anchorPanePrincipal {
+    -fx-background-color: black;
+}
+
+/* Estilos de los AnchorPane con contenido */
+.apContent {
+    -fx-background-color: #111111;
+    -fx-effect: dropshadow(three-pass-box, #050505, 10.0, 0.0, 0.0, 0.0);
+}
+
+/* Estilos del los Panes decorativos en los contenedores del programa */
+.paneLinea {
+    -fx-background-color: #222222;
+    -fx-background-radius: 2em;
+}
+
+.jfx-combo-box {
+    -jfx-focus-color: #323232;
+    -jfx-unfocus-color: #282828;
+    -fx-prompt-text-fill: #4d1f19;
+}
+
+/**------------------ Estilos del los comboBox --------------------*/
+/* Cambia el borde de los items desplegables */
+.comboBoxConversor .list-view {
+    -fx-background-color: #151515;
+}
+
+/* Cambia el color de fondo y texto de los items desplegables */
+.comboBoxConversor .list-cell {
+    -fx-background-color: #111111;
+    -fx-text-fill: #666666;
+}
+
+/* Cambia el color del texto del item en su estado hover */
+.comboBoxConversor .list-cell:hover {
+    -fx-text-fill: #cccccc;
+}
+
+/* Cambia el color de fondo del item en su estado hover */
+.comboBoxConversor .list-view .list-cell:hover {
+    -fx-background-color: #222222;
+}
+
+/*Cambia el color de fondo del item cuando esta seleccionado */
+.comboBoxConversor .list-view .list-cell:selected {
+    -fx-background-color: #222222;
+    -fx-text-fill: #cccccc;
+}
+
+/**---------------- FIN Estilos del los comboBox ------------------*/
+
+/* Estilos de los campos de texto del conversor */
+.txtConversor {
+    -jfx-focus-color: #142634;
+    -jfx-unfocus-color: #282828;
+    -fx-prompt-text-fill: #4d1f19;
+    -fx-text-fill: #888888;
+}
+
+/* Estilos de los labels generales */
+.labelsGenerales {
+    -fx-text-fill: #666666;
+}
+
+/* Estilos de los sliders */
+.slider {
+    -jfx-default-thumb: rgb(3, 67, 117);
+    -jfx-default-track: #3c8dbc;
+}
+
+/* Estilos de los botones con funciones más importantes */
+.imp-btn {
+    -fx-background-color: #111111;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+    -fx-border-color: #666666;
+    -fx-text-fill: #888888;
+}
+
+.imp-btn:pressed {
+    -fx-rotate: 10;
+}
+
+/*-------------------- Estilos de las alertas ---------------------*/
+/* Estilos del heading de la alerta*/
+#dialogAlerts .jfx-layout-heading .label {
+    -fx-text-fill: #cdcdcd;
+}
+
+/* Color de fondo de la alerta */
+#dialogAlerts {
+    -fx-background-color: #2e303e;
+    -fx-effect: dropshadow(three-pass-box, #393939, 10.0, 0.0, 0.0, 0.0);
+}
+
+/* Estilos del botón del dialogo o alerta de validación */
+.dialog-button {
+    -fx-background-color: #2e303e;
+    -fx-border-color: #666666;
+    -fx-text-fill: #888888;
+    -fx-background-radius: 5em;
+    -fx-border-radius: 5em;
+    -fx-font-family: Ebrima;
+    -fx-font-size: 1.2em;
+    -fx-padding: 5px 25px 5px 25px;
+}
+
+.dialog-button:hover {
+    -fx-background-color: #252836;
+    -fx-border-color: #252836;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+/*------------------ FIN Estilos de las alertas -------------------*/
+
+/* Estilos del "Acerca de" */
+#dialogAcercaDe {
+    -fx-background-image: url("/com/corphy/img/CorPhy-About.png");
+}
+
+/*-------------------- Estilos de las barras de desplazamiento --------------------*/
+
+/* Estilos del ScrollPane para quitar el borde */
+.scrollPane-bar {
+    -fx-background-color: transparent;
+}
+
+/* Estilos principales de la barra desplazamiento */
+.scrollPane-bar .scroll-bar:horizontal,
+.scrollPane-bar .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+/* Botón de incremento y decremento de la barra de desplazamiento */
+.scrollPane-bar .increment-button, .scrollPane-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* La barra de desplazamiento principal ** thumb ** que arrastramos cada vez (movible) */
+.scrollPane-bar .scroll-bar:horizontal .thumb,
+.scrollPane-bar .scroll-bar:vertical .thumb {
+    -fx-background-color: derive(black, 50%);
+}
+
+/* La barra de desplazamiento principal ** track (pista) ** en los eventos "hover" y "pressed" */
+
+.scrollPane-bar .scroll-bar:horizontal:hover .track,
+.scrollPane-bar .scroll-bar:horizontal:pressed .track,
+.scrollPane-bar .scroll-bar:vertical:hover .track,
+.scrollPane-bar .scroll-bar:vertical:pressed .track {
+    -fx-background-color: derive(#434343, 20%);
+    -fx-opacity: 0.2;
+    -fx-background-radius: 0em;
+}
+
+/* La barra de desplazamiento principal ** thumb ** en el evento "hover" */
+.scrollPane-bar .scroll-bar .thumb:hover {
+    -fx-background-color: derive(black, 70%);
+}
+
+/* La barra de desplazamiento principal ** thumb ** en el evento "pressed" */
+.scrollPane-bar .scroll-bar .thumb:pressed {
+    -fx-background-color: derive(black, 50%);
+}
+
+/*------------------ FIN Estilos de las barras de desplazamiento ------------------*/
+
+/*------------------------- Estilos de los CheckBox -------------------------------*/
+
+/* Color de la caja del CheckBox cuando esta seleccionada. Este estilo se sobreescribe de los estilos originales */
+.jfx-check-box {
+    -jfx-checked-color: rgb(3, 67, 117);
+}
+
+/* Color del texto */
+.cbGenerales {
+    -fx-text-fill: #666666;
+}
+
+/* Color del borde y la caja del CheckBox cuando esta seleccionado */
+.cbGenerales:selected .box {
+    -fx-background-color: rgb(3, 67, 117);
+}
+
+/*------------------------ FIN Estilos de los CheckBox -----------------------------*/
+
+/* Estilos de los botones para cerrar una ventana */
+.btnClose{
+    -fx-background-radius: 50%;
+}
+
+.btnClose:hover{
+    -fx-background-color: #db3552;
+}
+
+.btnClose:hover .iconClose{
+    -fx-fill: #ffffff;
+}
+
+/***************************************************************************
+ *                                                                         *
+ * Estilos específicos de la aplicación			                           *
+ *                                                                         *
+ **************************************************************************/
+
+/* Estilos de los labels de configuración y el ToggleButton del menú */
+.lbSettings {
+    -fx-text-fill: #cccccc;
+}
+
+/* Estilos de los iconos de configuración del menú */
+.iconSettings {
+    -fx-fill: #cccccc;
+}
+
+/* Estilos de las notas */
+.notas {
+    -fx-background-color: #111111;
+    -fx-effect: dropshadow(three-pass-box, #000000, 10.0, 0.0, 0.0, 0.0);
+}
+
+/* Estilos del icono de las notas */
+.notasIcon {
+    -fx-fill: #cccccc;
+}
+
+/* Estilos de los iconos que representan las viñetas */
+.notas-bullet-point {
+    -fx-fill: #999999;
+}
+
+/* Estilos de los Text de las notas */
+.notasTextGenerales {
+    -fx-fill: #666666;
+}

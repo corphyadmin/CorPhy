@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import de.jensd.fx.glyphs.weathericons.WeatherIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootStackPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.corphy.app.Controlador">
+    <children>
+        <AnchorPane id="AnchorPane" fx:id="rootAnchorPane" prefHeight="650.0" prefWidth="1300.0">
+            <children>
+                <AnchorPane prefHeight="650.0" prefWidth="219.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="204.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/arrowRight.png" />
+                     </image>
+                  </ImageView>
+                        <Label alignment="TOP_CENTER" layoutX="3.0" layoutY="18.0" prefHeight="49.0" prefWidth="223.0" styleClass="logo" text="CorPhy" textFill="#67d3e0">
+                            <font>
+                                <Font name="Gabriola" size="40.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/logo.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Label>
+                        <Separator layoutX="11.0" layoutY="77.0" nodeOrientation="LEFT_TO_RIGHT" opacity="0.19" prefHeight="0.0" prefWidth="213.0" />
+                        <AnchorPane layoutX="-6.0" layoutY="115.0" prefHeight="535.0" prefWidth="50.0" styleClass="apBarraSidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="110.0">
+                            <effect>
+                                <DropShadow color="#252836" />
+                            </effect>
+                        </AnchorPane>
+                        <JFXButton fx:id="btnConversor" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" layoutY="110.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="234.0" styleClass="itemMenu" text="Conversor" textFill="#fcfcfc">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/coordinate.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_example" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" layoutY="154.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="234.0" styleClass="itemMenu" text="Ejemplos" textFill="#fcfcfc">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/example.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSettings" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="30.0" layoutY="567.0" onAction="#handleButtonAction" prefHeight="44.0" prefWidth="245.0" styleClass="itemMenu" text="Configuración" textFill="#fcfcfc" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="0.0">
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/settings.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnAbout" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="30.0" layoutX="-2.0" layoutY="611.0" onAction="#btnAboutHandleButtonAction" prefHeight="44.0" prefWidth="237.0" styleClass="itemMenu" text="Acerca de" textFill="#fcfcfc" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/about.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" layoutY="198.0" onAction="#btnGraficadorHandleButtonAction" prefHeight="44.0" prefWidth="234.0" styleClass="itemMenu" text="Graficador de funciones" textFill="#fcfcfc">
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/chart.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <OctIconView fx:id="oneIcon" fill="#edf2f6" glyphName="TRIANGLE_LEFT" layoutX="225.0" layoutY="140.0" size="25" styleClass="positionIcons" text="" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="addExamplesPane" layoutY="93.0" maxWidth="234.0" prefHeight="565.0" prefWidth="234.0" styleClass="sidebar" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="93.0">
+                    <children>
+                        <JFXButton fx:id="btn_back" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="24.0" layoutY="15.0" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="47.0" styleClass="btnBack" text="Back" textFill="#a4a4a4">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/left.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <tooltip>
+                                <Tooltip text="Atrás" />
+                            </tooltip>
+                        </JFXButton>
+                        <AnchorPane layoutY="63.0" prefHeight="502.0" prefWidth="47.0" styleClass="apBarraSidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="63.0">
+                            <effect>
+                                <DropShadow color="#252836" />
+                            </effect>
+                        </AnchorPane>
+                        <JFXButton fx:id="btnCoorCart" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" layoutX="-2.0" layoutY="63.0" onAction="#handleShowFileAction" prefHeight="44.0" prefWidth="237.0" styleClass="itemMenu" text="Coordenadas cartesianas" textFill="#fcfcfc">
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets left="12.0" />
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/cartesianas.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCoorCil" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" layoutX="-2.0" layoutY="107.0" onAction="#handleShowFileAction" prefHeight="44.0" prefWidth="237.0" styleClass="itemMenu" text="Coordenadas cilíndricas" textFill="#fcfcfc">
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets left="12.0" />
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/cilindricas.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCoorEsf" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" layoutX="-2.0" layoutY="151.0" onAction="#handleShowFileAction" prefHeight="44.0" prefWidth="237.0" styleClass="itemMenu" text="Coordenadas esféricas" textFill="#fcfcfc">
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets left="12.0" />
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/esfericas.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCoorPol" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="25.0" layoutY="195.0" onAction="#handleShowFileAction" prefHeight="44.0" prefWidth="234.0" styleClass="itemMenu" text="Coordenadas polares" textFill="#fcfcfc">
+                            <font>
+                                <Font name="Yu Gothic UI Light" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets left="12.0" />
+                            </padding>
+                            <graphic>
+                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/polar.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXButton>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="settingsPane" layoutY="93.0" maxWidth="234.0" prefHeight="557.0" prefWidth="234.0" styleClass="sidebar" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="93.0">
+                    <children>
+                        <JFXButton fx:id="btn_back_Stt" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" focusTraversable="false" layoutX="24.0" layoutY="15.0" onAction="#handleButtonAction" prefHeight="29.0" prefWidth="47.0" styleClass="btnBack" text="Back" textFill="#a4a4a4">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../img/left.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <tooltip>
+                                <Tooltip text="Atrás" />
+                            </tooltip>
+                        </JFXButton>
+                        <Label layoutY="64.0" prefHeight="37.0" prefWidth="147.0" styleClass="lbSettings" text="Tema oscuro">
+                            <font>
+                                <Font name="Yu Gothic Light" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets left="8.0" />
+                            </padding>
+                            <graphic>
+                                <WeatherIconView fill="#a81515" glyphName="MOON_WANING_CRESCENT_3" size="25" styleClass="iconSettings" />
+                            </graphic>
+                        </Label>
+                        <JFXToggleButton fx:id="tgTheme" layoutX="148.0" layoutY="59.0" onAction="#handleTgThemeAction" prefHeight="33.0" prefWidth="86.0" size="8.0" styleClass="lbSettings" text="OFF" />
+                        <Label graphicTextGap="8.0" layoutY="121.0" prefHeight="21.0" prefWidth="147.0" styleClass="lbSettings" text="Línea superior">
+                            <font>
+                                <Font name="Yu Gothic Light" size="15.0" />
+                            </font>
+                            <padding>
+                                <Insets left="8.0" />
+                            </padding>
+                            <graphic>
+                                <MaterialDesignIconView glyphName="COLOR_HELPER" size="17" styleClass="iconSettings" translateY="-7.0" wrappingWidth="17.0" />
+                            </graphic>
+                        </Label>
+                        <JFXToggleButton fx:id="tgLinea" layoutX="148.0" layoutY="107.0" onAction="#handleTgLineaAction" prefHeight="33.0" prefWidth="86.0" selected="true" size="8.0" styleClass="lbSettings" text="ON" />
+                    </children>
+                </AnchorPane>
+                <Pane fx:id="paneLinea" layoutX="234.0" prefHeight="3.0" prefWidth="1065.0" styleClass="lineaSuperior" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <AnchorPane fx:id="conversorPane" layoutX="234.0" layoutY="13.0" prefHeight="637.0" prefWidth="1066.0" styleClass="anchorPanePrincipal" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                    <children>
+                        <AnchorPane prefHeight="63.0" prefWidth="1066.0" styleClass="anchorPaneHeader" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" layoutX="1.0" layoutY="18.0" prefHeight="27.0" prefWidth="1066.0" styleClass="lbTituloPr" text="Conversor de coordenadas" textFill="#343746" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="16.0">
+                                    <font>
+                                        <Font name="Dosis SemiBold" size="20.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="50.0" layoutY="110.0" prefHeight="289.0" prefWidth="630.0" styleClass="apContent">
+                            <children>
+                                <Pane minHeight="5.0" prefHeight="5.0" prefWidth="630.0" styleClass="paneLinea" />
+                                <JFXComboBox fx:id="cbCoorMain" focusTraversable="false" layoutX="24.0" layoutY="29.0" onAction="#cbCoorMainHandleButtonAction" prefHeight="25.0" prefWidth="207.0" styleClass="comboBoxConversor" />
+                                <JFXTextField fx:id="txtXRadio" layoutX="24.0" layoutY="119.0" prefHeight="29.0" prefWidth="168.0" styleClass="txtConversor">
+                                    <font>
+                                        <Font name="Courier New" size="15.0" />
+                                    </font>
+                                </JFXTextField>
+                                <Label layoutX="24.0" layoutY="96.0" prefHeight="20.0" prefWidth="47.0" styleClass="labelsGenerales" text="X" fx:id="xRadio">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                                <JFXTextField fx:id="txtYAngulo" layoutX="231.0" layoutY="119.0" prefHeight="29.0" prefWidth="168.0" styleClass="txtConversor">
+                                    <font>
+                                        <Font name="Courier New" size="15.0" />
+                                    </font>
+                                </JFXTextField>
+                                <Label fx:id="yAngulo" layoutX="231.0" layoutY="96.0" prefHeight="20.0" prefWidth="59.0" styleClass="labelsGenerales" text="Y">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                                <JFXTextField fx:id="txtZPhi" disable="true" layoutX="438.0" layoutY="118.0" prefHeight="29.0" prefWidth="168.0" styleClass="txtConversor">
+                                    <font>
+                                        <Font name="Courier New" size="15.0" />
+                                    </font>
+                                </JFXTextField>
+                                <Label fx:id="zPhi" disable="true" layoutX="463.0" layoutY="96.0" prefHeight="20.0" prefWidth="47.0" styleClass="labelsGenerales" text="Z">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                                <JFXButton fx:id="btnCalcular" focusTraversable="false" layoutX="237.0" layoutY="205.0" onAction="#btnCalcularHandleButtonAction" prefHeight="33.0" prefWidth="157.0" styleClass="imp-btn" text="Calcular" textFill="#343746">
+                                    <font>
+                                        <Font name="Dosis SemiBold" size="15.0" />
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <tooltip>
+                                        <Tooltip text="Calcular conversión" />
+                                    </tooltip>
+                                </JFXButton>
+                                <JFXComboBox fx:id="cbCoorSec" focusTraversable="false" layoutX="274.0" layoutY="29.0" prefHeight="25.0" prefWidth="207.0" styleClass="comboBoxConversor" />
+                        <JFXCheckBox fx:id="cbRadians" focusTraversable="false" layoutX="522.0" layoutY="36.0" styleClass="cbGenerales" text="Radianes">
+                           <font>
+                              <Font name="Ebrima" size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                            </children>
+                            <effect>
+                                <DropShadow color="#cccccc" />
+                            </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="737.0" layoutY="110.0" prefHeight="289.0" prefWidth="286.0" styleClass="apContent" AnchorPane.leftAnchor="737.0" AnchorPane.rightAnchor="50.0">
+                            <children>
+                                <Pane minHeight="5.0" prefHeight="5.0" prefWidth="279.0" styleClass="paneLinea" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                <Label alignment="CENTER" layoutY="24.0" prefHeight="21.0" prefWidth="286.0" styleClass="labelsGenerales" text="Resultados" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+                                    <font>
+                                        <Font name="Ebrima" size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lbNumDecimales" layoutX="21.0" layoutY="68.0" prefHeight="20.0" prefWidth="125.0" styleClass="labelsGenerales" text="Números decimales" visible="false">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font>
+                                </Label>
+                                <JFXSlider fx:id="slider" layoutX="21.0" layoutY="97.0" max="15.0" min="1.0" prefHeight="14.0" prefWidth="244.0" value="1.4" visible="false" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="97.0" />
+                                <Label fx:id="lbXRadio" layoutX="23.0" layoutY="123.0" prefHeight="20.0" prefWidth="59.0" styleClass="labelsGenerales" text="X:" visible="false">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="label1" layoutX="111.0" layoutY="123.0" prefHeight="20.0" prefWidth="157.0" styleClass="labelsGenerales">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lbYAngulo" layoutX="23.0" layoutY="162.0" prefHeight="20.0" prefWidth="59.0" styleClass="labelsGenerales" text="Y:" visible="false">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="label2" layoutX="111.0" layoutY="162.0" prefHeight="20.0" prefWidth="157.0" styleClass="labelsGenerales">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lbZPhi" layoutX="23.0" layoutY="200.0" prefHeight="20.0" prefWidth="59.0" styleClass="labelsGenerales" text="Z:" visible="false">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="label3" layoutX="111.0" layoutY="200.0" prefHeight="20.0" prefWidth="157.0" styleClass="labelsGenerales">
+                                    <font>
+                                        <Font name="Ebrima" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <effect>
+                                <DropShadow color="#cccccc" />
+                            </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="50.0" layoutY="471.0" prefHeight="104.0" prefWidth="952.0" style="-fx-background-radius: 1.5em;" styleClass="apContent" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                            <children>
+                                <AnchorPane prefHeight="104.0" prefWidth="136.0" styleClass="notas">
+                                    <children>
+                                        <MaterialDesignIconView fill="WHITE" glyphName="LIBRARY_BOOKS" layoutX="43.0" layoutY="70.0" size="50" styleClass="notasIcon" text="" wrappingWidth="50.0" />
+                                    </children>
+                                    <effect>
+                                        <DropShadow color="#068d70" />
+                                    </effect>
+                                </AnchorPane>
+                                <Label layoutX="161.0" layoutY="8.0" prefHeight="25.0" prefWidth="41.0" styleClass="lbTituloPr" text="Nota">
+                                    <font>
+                                        <Font name="Dosis SemiBold" size="18.0" />
+                                    </font>
+                                </Label>
+                                  <Text fill="#950ea1" layoutX="179.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notasTextGenerales" text="El ángulo θ (Theta) es el ángulo que está en el plano XY en las coordenadas cilíndricas y esféricas." textAlignment="JUSTIFY" wrappingWidth="780.01513671875">
+                                      <font>
+                                          <Font name="Ebrima" size="15.0" />
+                                      </font>
+                                  </Text>
+                        <Text layoutX="179.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notasTextGenerales" text="El ángulo φ (Phi) define el ángulo entre Z positivo y Z negativo en las coordenadas esféricas." wrappingWidth="780.0151342004538">
+                           <font>
+                              <Font name="Ebrima" size="15.0" />
+                           </font>
+                        </Text>
+                        <FontAwesomeIconView glyphName="CIRCLE" layoutX="160.0" layoutY="52.0" size="10" styleClass="notas-bullet-point" />
+                        <FontAwesomeIconView glyphName="CIRCLE" layoutX="160.0" layoutY="81.0" size="10" styleClass="notas-bullet-point" text="" />
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

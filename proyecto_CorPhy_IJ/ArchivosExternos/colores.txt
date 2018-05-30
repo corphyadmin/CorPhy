@@ -1,0 +1,3 @@
+0aab8a -> verde
+[219,53,82] ->rosado
+3c8dbc -> azul

@@ -1,0 +1,8 @@
+Funcionalidades a realizar
+- mostrar paso a paso en la conversión de coordenadas
+- operaciones con vectores: suma, resta, multiplicacion, producto punto.
+- ejemplos de convesion entre sistemas de coordenadas
+
+**Posibles funcionalidades a futuro**
+- producto cruz
+- graficar los resultados de las conversiones
